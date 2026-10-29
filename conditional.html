@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num1=23;
+        if(num1>25){
+
+            document.write('num1 is greater' +"<br>")
+        }
+
+        else{
+            document.write("num1 is smalller"+"<br>")
+        }
+
+        let age=15;
+        if(age>=18){
+            document.write('eligible for driving license'+"<br>")
+        }
+
+        else{
+            document.write('not eligible for driving license' +"<br>")
+        }
+
+        let userName=prompt("enter a name")
+        let userPassword=prompt("enter a value")
+
+        if(userName === 'pranali' || userPassword==1234){
+            document.write('logic successful' +"<br>")
+        }
+
+        else{
+            document.write('credential not match'+"<br>")
+        }
+
+
+        //nested 
+
+        let balance=5000
+        let amount=3000
+
+        if(balance>0){
+            if(amount<=balance){
+                document.write("amount procced...."+"<br>")
+                document.write("remsinf balance is :"+(balance-amount)+"<br>")
+            }
+
+            else{
+                document.write("Insufficient Balance..!!")
+            }
+
+        }
+        else{
+            document.write("pin in incorrect,try again..!!")
+        }
+        //ladder
+        let per=prompt("enter a percentage")
+
+        if(per>=80){
+            document.write("Grade A")
+        }
+        else if(per>=60){
+            document.write("Grade B")
+        }
+
+        else if(per>=40){
+            document.write("Grade C")
+        }
+        else if(per>=30){
+            document.write("Grade D")
+        }
+        else{
+            document.write("Failed....")
+        }
+        </script>
+    
+</body>
+</html>

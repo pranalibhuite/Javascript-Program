@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let i=1;
+        // while(i<=5){
+        //     console.log(i)
+        //     i++
+        // }
+
+        //     let j=15;
+        // do{
+        //     console.log(j)
+
+        // j++
+        // }
+        // while(j<=15)
+
+
+        // for loop syntax (initailization;condition;increment/decrement)
+
+        for (let i = 1; i <= 5; i++) {
+            console.log(i)
+        }
+
+        for (let j = 1; j <= 10; j++) {
+            if (j % 2 === 0) {
+                console.log(j)
+            }
+
+        }
+        for (let k = 1; k <= 6; k++) {
+            if (k === 3) {
+                break;
+            }
+            console.log(k)
+        }
+
+
+        for (let p = 10; p >= 1; p--) {
+            document.write(p + "<br>")
+        }
+
+        for (let n = 1; n <= 10; n++) {
+            document.write(5 * n + "<br>")
+        }
+
+        //for -of
+        let ary = ["a", "b", "c", "d", "e"]
+
+        // document.write(ary[0]+"<br>")
+        // document.write(ary[1]+"<br>")
+        // document.write(ary[2]+"<br>")
+        // document.write(ary[3]+"<br>")
+
+
+        // for(intaialization of array/object)
+
+        for (let array of ary) {
+            document.write(array + "<br>")
+
+        }
+
+        // for-in-object key synatx: for(intaialization in object name)
+        let object = {
+            name: 'john',
+            age: 30,
+            email: 'info@gmail.com'
+        }
+        document.write('name : ' + object.name + "<br>")
+        document.write('age : ' + object.age + "<br>")
+        document.write('email : ' + object.email + "<br>")
+
+        for (let key in object) {
+            document.write(key + ':' + object[key] + "<br>")
+
+        }
+
+        //foreach
+
+        let arr = [10, 20, 30, 40, 50, 60]
+        arr.forEach(function (a) {
+            console.log(a * 10)
+        })
+
+        let marks = [80, 85, 90, 75, 64, 32, 87, 78]
+
+        marks.forEach(function (mark) {
+            if (mark >= 75) {
+                document.write(mark + "=pass" + "<br>")
+            }
+            else {
+                document.write(mark + "=fail" + "<br>")
+            }
+        })
+
+        let fruits = ["apple", "mango", "banana", "jackfruit"]
+        fruits.forEach(function (fruit, index) {
+            document.write(index + ":" + fruit + "<br>")
+        })
+
+
+    </script>
+</body>
+
+</html>

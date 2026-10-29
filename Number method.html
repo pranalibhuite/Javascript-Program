@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //toString()=converts to number into string
+
+        let num=123;
+        document.write(typeof((num.toString()))+"<br>")
+
+        //toFixed = formats a number withs specified number of decimal places.
+        //!important=toFixed always be return the string
+        
+        let num2=12.4547896
+        document.write(num2.toFixed(3)+"<br>")
+
+        //toPercision=formats number according to the specified number of siginficint digits
+
+        let num3=123.456
+        document.write(num3.toPrecision(3)+"<br>")
+
+        //number=method converts string into number
+
+        let num4='345'
+        document.write(typeof(Number(num4))+"<br>")
+        </script>
+</body>
+</html>

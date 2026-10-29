@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //IIFE
+        (function(){
+            console.log('IIFE called')
+        })()
+        //named function/function declaration
+
+        //syntax:function functionName(){
+        //    //code
+        //}
+        //  functionName()
+
+
+        function demo() {
+            document.write("hello everyone...." + "<br>")
+        }
+        demo()
+
+        function test(a, b) {
+            return a + b
+        }
+
+        let result = test(2, 3)
+        document.write(result + "<br>")
+
+        //function expression
+
+        const text = function () {
+            console.log('hello')
+        }
+        text()
+
+        const sum = function (a, b) {
+            return a + b
+        }
+        console.log(sum(4, 4))
+
+        let print = () => { console.log("Arrow function") }
+        print()
+
+        let add = (a, b) => { document.write((a + b)) + "<br>" }
+        add(5, 5)
+
+        let circleRadius = (r) => { document.write((3.142 * r * r * r) + "<br>") }
+        circleRadius(3)
+
+        //deafault parameter function type
+
+        function greet(a = 'sevenmentor') {
+            console.log(a)
+        }
+        greet()
+        greet()
+        greet()
+        greet()
+        greet()
+        greet('react')
+
+        //callback function : that function will call in another function that is called callback function
+
+        function substraction(a, b) {
+            return a - b
+        }
+
+        function display() {
+            document.write('display function called.....something is happened in display' + "<br>")
+            let result = substraction(8, 5)
+            document.write(result + "<br>")
+
+        }
+        display()
+
+
+        //anonymous function =that function have a any name that is called anonymous function
+        
+        const deal=function(){
+            console.log("deal cracked")
+        } 
+
+        deal()
+
+
+        setTimeout(function(){
+            console.log("anonymous function called")
+        },1000)
+
+        //Hoc
+
+        function calculate(a,b,operation){
+            operation(a,b)
+        }
+
+        function addition(a,b){
+            document.write(a+b)
+        }
+
+        calculate(7,7,addition)
+
+
+    </script>
+</body>
+
+</html>

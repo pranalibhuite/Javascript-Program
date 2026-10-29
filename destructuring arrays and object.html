@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //destructuring is allows us to extract the va;lues from array/object and assign to the separtae variables.
+
+   
+
+        let student=["john",20,'pune']
+        let name=student[0]
+        let age=student[1]
+        let city=student[2]
+        console.log(name)
+       console.log(age)
+        console.log(city)
+
+        let[namee,agee,cityy]=student
+
+        let num=[1,2,3,4,5]
+        let [a,b,c,...d]=num
+        console.log(a)
+        console.log(b)
+        console.log(c)
+                console.log(d)
+
+                let [...remainingValues]=num
+                        console.log(remainingValues)
+
+             let numbers=[10,20,30,40]
+             let [first,second,,fourth]=numbers 
+             console.log(fourth)  
+             
+             let details=['sevenM',30]
+             let[fname,year,locationn='pune']=details
+             console.log(fname,year,locationn)
+
+             //swapping the variables
+             let x=100;let y=200;
+               [x,y]=[y,x]
+               console.log(x)
+               console.log(y)
+
+
+               //object destructuring
+               let newStudent={
+                firstName:'XYZ',
+                email:'contact@gmail.com',
+                mobieNo:2345656
+
+               }
+               console.log(newStudent.firstName)
+               console.log(newStudent.email)
+               console.log(newStudent.mobieNo)
+
+            //    let {firstName,mobieNo,email}=newStudent
+            //    console.log(firstName,email,mobieNo)
+
+//                let {firstName:initialName,email:info,mobieNo:contact}=newStudent
+
+// console.log(initialName,info,contact)
+
+//default values in Object
+// let {firstName,email,mobieNo,address="pune"}=newStudent
+// console.log(firstName,email,mobieNo,address)
+
+//rest opeartor
+
+
+let{firstName,...detaills}=newStudent
+console.log(detaills)
+
+
+//netsed desructuring
+let studentInfo={
+    names:'Javascript',
+    age:30,
+    address:{
+        cities:'pune',
+        pincode:411005,
+        subject:{
+            classs:'javascript'
+        }
+    }
+}
+
+let{names,address:{cities,pincode,subject:{classs}}}=studentInfo
+console.log(classs)
+
+function demo(){
+    return [2,3,4,5,6,7]
+}
+
+let [l,m,n,p,q,r]=demo()
+document.write(l,m,n,p,q,r)
+    </script>
+    
+</body>
+</html>
+ 

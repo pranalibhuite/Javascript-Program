@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+
+<body>
+    <h2 id="h2"></h2>
+    <p id="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, reiciendis? Consectetur nemo dicta
+        inventore, tenetur eligendi perferendis odio vitae impedit amet, voluptas voluptates aut reprehenderit rem nam
+        suscipit, corrupti quaerat.</p>
+    <button id="btnclick">click</button>
+    <button id="btndblclick">double click</button>
+    <button id="btnRemove">Remove event</button>
+
+    <script>
+        //syntax
+        // doucment.getElementById('').addEventListener('eventName',functionName)
+        //doucment.getElementById('').addEventListener('eventName',functionName(){})
+
+        document.getElementById('btnclick').addEventListener('click', demo)
+
+        function demo() {
+            document.getElementById('h2').innerHTML = "It's addEvenetListener...."
+
+        }
+
+        document.getElementById('btndblclick').addEventListener('dblclick', function () {
+            document.getElementById('h2').innerHTML = "It'a a double click event...."
+        })
+
+
+        document.getElementById('p').addEventListener('mouseenter',test)
+
+        function test(){
+            document.getElementById('p').style.backgroundColor="yellow"
+        }
+        document.getElementById('btnRemove').addEventListener('click',function(){
+            document.getElementById('p').removeEventListener('mouseenter',test)
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>

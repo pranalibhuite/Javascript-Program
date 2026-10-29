@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //syntax:
+        //(condition)?code excution:else block of code exucted
+        let num = 14;
+        (num > 10) ? console.log('num is greater') : console.log('nume is smaller')
+
+
+        let balance = 5000;
+        let amount = 3000;
+        (balance > 0) ? (amount <= balance) ? document.write("amount is procced.....") + document.write('remaianing balance:' + (balance - amount))
+            : document.write('insufficient balace...') : document.write("pin is incorrect...")
+
+        let a = 6;
+        (a % 2 == 0) ? console.log('a is even') : console.log('a is odd')
+
+        let b=-10;
+        (b>=0)?console.log('b is positive'):console.log('b is negative')
+
+
+    //     let Password="admin123";
+    //     (Password=="admin123")?document.write('login succesfully'):document.write('invalid password');
+// 
+
+
+        let age=14;
+        (age>=18)?console.log('eligible to vote'):console.log('not in eligible in vote');
+
+        let password = "admin123";
+        (password == "admin123")? document.write(("Login successful")+"<br>"): document.write(("Invalid password")+"<br>");
+
+        let Stock=10;
+        (Stock<=0)?document.write("product availble"):document.write("out of stock")+"<br>";
+
+        
+
+
+
+
+</script>
+</body>
+
+</html>

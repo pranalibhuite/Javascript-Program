@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person={
+            name:'john',
+            age:20,
+            // greet:function(){
+            //     document.write("hello"+"<br>")
+            // }
+            // greet(){
+            //     document.write("hello"+"<br>")
+            // }
+            greet(){
+                document.write(`hello ${this.name} and my age is ${this.age}`)
+            }
+        }
+        person.greet()
+        document.write("Name: "+ person.name+"<br>")
+
+        let bankAccount={
+            balance:100,
+            depositAmount(amount){
+                this.balance+=amount
+            }
+        }
+        bankAccount.depositAmount(50)
+        document.write(bankAccount.balance+"<br>")
+
+        let student={
+            name:'pranali',
+            subject:'javascript',
+
+            details:()=>{
+                document.write(this.name+"<br>")
+            }
+        }
+        student.details()
+
+        //object.keys=it will return the object keys
+
+        let students={
+            name:'pranali',
+            age:30
+        }
+        document.write(Object.keys(students)+"<br>")
+        document.write(Object.entries(students)+"<br>")
+        document.write(Object.values(students)+"<br>")
+        let obj1={
+            name:'raj'
+
+        }
+        let obj2={
+            mobileNo:1233455
+        }
+        let newObject=Object.assign({},obj1,obj2)
+        console.log(newObject)
+
+    </script>
+    
+</body>
+</html>

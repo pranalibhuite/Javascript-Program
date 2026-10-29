@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- list of formevents
+    onfocus
+    onchange 
+    onInput
+    onSelect
+    onSubmit 
+    onRange
+    Onblur -->
+    
+    <form onsubmit="submited()">
+        <input type="text" onfocus="focused(this)" onblur="blured(this)" id="name" onchange="changed()"/>
+        <br><br>
+        <input type="text" onfocus="focused(this)" onblur="blured(this)" id="email" onselect="selected()"/>
+        <br><br>
+        <input type="text" onfocus="focused(this)" onblur="blured(this)" id="password"/>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        let name=document.getElementById('name')
+        let email=document.getElementById('email')
+        let password=document.getElementById('password')
+        function focused(event){
+            event.style.backgroundColor="lightgrey"
+        }
+        function blured(event){
+            event.style.backgroundColor="lightgrey"
+        }
+
+        function changed(){
+            let fname=name.value;
+            console.log(fname)
+        }
+
+        function selected(){
+            let email=document.getElementById("email").value
+            alert(`${email} value is selected`)
+        }
+
+        function submited(){
+            name=name.value;
+            email=email.value;
+            password=password.value;
+            alert(`my name is${name} and email id is ${email} and password is ${password}`)
+        }
+    </script>
+</body>
+</html>

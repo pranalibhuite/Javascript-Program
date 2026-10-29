@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .abc{
+        background-color: red;
+        width: 200px;
+        border-radius: 1px solid black;
+        
+         
+        
+    }
+
+    .pqr{
+        background-color: aqua;
+        padding: 10px;
+    }
+
+    body{
+        height: 100vh;
+    }
+
+    .test{
+        background-color: orange;
+    }
+
+
+    </style>
+<body>
+    <div id="div" class="xyz">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptatum officia eligendi suscipit cumque atque vero accusantium ipsum quis delectus.</div>
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">remove Class</button>
+    <button onclick="toggleClass()">toggle Class</button>
+    <button onclick="replaceClass()">replce Class</button>
+    <button onclick="themeClass()">theme Class</button>
+
+    <script>
+        function addClass(){
+            let add=document.getElementById('div')
+            add.classList.add('abc')
+        }
+
+        function removeClass(){
+            let remove=document.getElementById('div')
+            remove.classList.remove('abc')
+        }
+
+        function toggleClass(){
+            let toggle=document.getElementById('div')
+            toggle.classList.toggle('abc')
+        }
+
+        let checking=document.getElementById('div').classList.contains('xyz')
+        console.log(checking)
+
+        function replaceClass(){
+            let replace=document.getElementById('div')
+            replace.classList.replace('abc','pqr')
+        }
+
+        function themeClass(){
+            document.body.classList.toggle('test')
+        
+        }
+
+
+
+        </script>
+    
+</body>
+</html>

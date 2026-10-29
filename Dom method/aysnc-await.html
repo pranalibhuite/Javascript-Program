@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData(){
+            return "hello everyone how are u?"
+        }
+        getData().then((data)=>{
+            console.log(data)
+        })
+
+        async function demo(){
+            let promise=new Promise((resolve)=>{
+                setTimeout(()=>{
+                    resolve("data received")
+                },2000)
+            })
+            let result=await promise;
+            console.log(result)
+        }
+        demo()
+        
+
+        function getUserData(){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    let success=true;
+                    if (success){
+                        resolve({
+                            id:1,
+                            name:"sevenmentor",
+                            city:"pune"
+
+                        });
+
+                    }
+                    else{
+                        reject("failed to fetch user details")
+                    }
+
+                },2000)
+            })
+
+        }
+
+        async function displayUser(){
+            try{
+                console.log("fetching data")
+                let user=await getUserData();
+                console.log("user id :",user.id)
+                console.log("user name :",user.name)
+                console.log("user city :",user.city)
+
+            }
+            catch(error){
+                console.log(error)
+            }
+        
+            displayUser()
+            
+        }
+    </script>
+    
+</body>
+</html>

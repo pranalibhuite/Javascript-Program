@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .error{
+        color: red;
+    }
+    </style>
+<body>
+    <form onsubmit="return validateForm()">
+        <h2>Registration form</h2>
+        <input type="text" id="name" placeholder="enter your name"/>
+        <p id ="nameError" class="error"></p>
+
+        <input type="email" id="email" placeholder="enter your email"/>
+        <p id ="emailError" class="error"></p>
+
+        <input type="text" id="mobile" placeholder="enter your mobile"/>
+        <p id ="mobileError" class="error"></p>
+
+        <input type="password" id="password" placeholder="enter your password"/>
+         <span onclick="showPassword()" id="span"><i class="fa-solid fa-eye-slash"></i></span>
+        <p id ="passwordError" class="error"></p>
+         
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+            let mobile=document.getElementById("mobile").value;
+
+            let valid=true;
+
+            if(name==""){
+                document.getElementById("nameError").innerHTML="Name is required";
+                valid=false
+            }
+            else{
+                document.getElementById("name").innerHTML="";
+            }
+
+            //password validation
+
+            if(password==""){
+                document.getElementById("nameError").innerHTML="password is required";
+                valid=false
+            }
+            else if(password.length<6){
+                document.getElementById("passwordError").innerHTML="password must be at least 6 character";
+                valid=false;
+            }
+            else{
+                document.getElementById("password").innerHTML="";
+            }
+
+            //email 
+            if(email==""){
+                document.getElementById("nameError").innerHTML="email is required";
+                valid=false
+            }
+            else{
+                document.getElementById("email").innerHTML="";
+            }
+
+
+            //mobile validation
+
+            if(mobile==""){
+                document.getElementById("nameError").innerHTML="mobile number is required";
+                valid=false
+            }
+            else if(mobile.length!=10){
+                document.getElementById("mobileError").innerHTML="enter valid 10 digit mobile number";
+                valid=false
+            }
+
+            else{
+                document.getElementById("mobile").innerHTML="";
+            }
+
+            if(valid){
+                alert("form submitted successfully.....")
+            }
+
+            return valid;
+             
+        }
+        function showPassword(){
+            let password=document.getElementById("password")
+            if(password.type=='password'){
+                password.type='text'
+                document.getElementById("span").innerHTML="<i class='fa-solid fa-eye'></i>"
+            }
+            else{
+                password.type='password'
+                document.getElementById("span").innerHTML="<i class='fa-solid fa-eye-slash'></i>"
+            }
+            console.log('called')
+        }
+        
+        </script>
+</body>
+</html> 

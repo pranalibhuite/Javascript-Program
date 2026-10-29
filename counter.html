@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: black;
+            color:white;
+            margin-top: 40px;
+            font-weight: 900;
+            font-size: 18px;
+            padding: 0;
+            box-sizing: border-box;
+            padding-top: 40px;
+
+
+
+        }
+
+        h3{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-weight: 900;
+            font-size: 18px;
+            padding: 0;
+            box-sizing: border-box;
+            padding-top: 40px;
+            display:  inline-block;
+            
+        }
+        </style>
+
+</head>
+<body>
+    <h2>+<span id="count"></span></h2>
+    <h3>+<span id="amount"></span></h3>
+
+    <script>
+        let count=document.getElementById('count')
+        let i=0;
+        //setInterval(function(){} or functionName,1000)
+        
+        let a=setInterval(happyStudents,10)
+        function happyStudents(){
+
+
+            if(i==500){
+                clearInterval(a)
+            }
+            else{
+                i++
+                document.getElementById('count').innerText=i
+            }
+        }
+
+        let amount=document.getElementById('amount')
+            let j=0;
+
+            let b=setInterval(happyAmounts,10)
+            function happyAmounts(){
+
+            if(j==1000){
+                clearInterval(b)
+            }
+            else{
+                j++
+                document.getElementById('amount').innerText=j
+            }
+        }
+
+        
+
+        </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let array = [1, 2, 4, 5]
+        // let a = new Array()
+        // a[0] = 'hii'
+        // a[1] = 'hello'
+        // a[2] = 3
+
+        // console.log(a)
+
+
+        let color = ['red', 'yellow', 'pink', 'green', 'violet', 'white', 5]
+
+        document.write(color + "<br>")
+        document.write(color.length + "<br>")
+
+        //push=it's and the new element value in the  array in last position
+        document.write(color.push('black') + "<br>")
+        document.write(color + "<br>")
+
+        //pop=remove the last value of an array and return remove value
+        document.write(color.pop() + "<br>")
+
+        //shift=remove the first value in array and return it
+        document.write(color.shift() + "<br>")
+
+        //unshift=add the value of an frist element or zero index value
+        document.write(color.unshift('purple') + "<br>")
+        document.write(color + "<br>")
+
+        //concat=it will merge the two array
+        // let aar1 =[1,2,3]
+        // let arr2 =[3,4,5]
+        // let arr3 =arr1.concat(arr2)
+        // document.write(arr3+"<br>")
+
+
+        //indexof=cheack the value is exist or not
+
+        document.write(color.includes('yellow') + "<br>")
+
+
+        //indexof=cheak that value is available in first
+
+        let num =[3,7,1,1,3,4,5,6,7,1,1]
+        document.write(num.indexOf(1) + "<br>")
+
+        document.write(num.lastIndexOf(1) + "<br>")
+
+        //reverse=is given a reverse value
+
+        // document.write(color.reverse() + "<br>")
+
+
+        //slice=returns a new array without changing the original
+
+        document.write(color.slice(1,4)+"<br>")
+
+        //splice=adds/remove elements by modifying the orginal array
+
+        let arr4=[1,2,3,4,5,6,7]
+        document.write(arr4.splice(1,4)+"<br>")
+
+        //insert
+
+        let arr5=[1,2,3]
+        document.write(arr5.splice(2,0,3)+"<br>")
+
+        document.write(arr5+"<br>")
+
+
+        //find-returns the first matching element
+
+
+        let aa6=[5,10,15,12,16,13]
+
+        let result=arr6.find(num=>num>8)
+        document.write(result+"<br>")
+        document.write(arr6.findIndex(num=>num>8)+"<br>")
+
+
+        //iteration method
+        //forEach
+
+        let arr7=[10,20,30]
+        arr7.forEach((num)=>{
+            document.write(num*10+"<br>")
+        })
+
+        //map=create a new array
+
+        arr7.map((num)=>{
+            document.write(num*10+"<br>")
+        })
+
+
+        //filter-matches the element of condition
+
+        arr8=[3,4,6,7,8,675,68,44,9,23,5,3,2,35,5]
+        let print=arr8.filter(num=>100)
+        document.write(print+"<br>")
+
+
+
+    </script>
+</body>
+
+</html>

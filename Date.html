@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let date = new Date()
+        document.write(date.getDate() + "<br>")
+        //0=sunday,6=saturday
+
+        document.write(date.getDay() + "<br>")
+
+        let day = ["sun", "mon", "wedn", "thur", "fri", "sat"]
+
+        document.write(day[date.getDay()] + "<br>")
+        document.write(date.getFullYear() + "<br>")
+        document.write(date.getHours() + "<br>")
+        document.write(date.getMinutes() + "<br>")
+        document.write(date.getSeconds() + "<br>")
+        document.write(date.getMilliseconds() + "<br>")
+        document.write(date.getMonth() + "<br>")
+        document.write((date.getMonth() + 1) + "<br>")
+        document.write(date.getTime() + "<br>")
+
+        //return the difference ,in minuts,between coordinates universal time and the local time of the hosr enviroment
+
+        document.write(date.getTimezoneOffset() + "<br>")
+        document.write(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "<br>")
+        document.write(date.getDate() + /sept/ + date.getFullYear() + "<br>")
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="https://cdn.dmart.in/images/rwd/banners/hmpg/1oct24-crsl-dg-pune.jpg"/>
+
+<script>
+    let arrayImage=[
+       "image/slider2.webp",
+        "image/slider3.webp",
+       "image/slider4.webp",
+       "image/slider5.webp",
+        "image/slider6.webp",
+        "image/slider7.webp"
+
+
+
+
+    ]
+    let image=document.getElementById('image')
+    let index=0;
+
+    function changeImage(){
+        index++;
+        if(index>=6){
+            index=0
+        }
+        image.src=arrayImage[index]
+
+    }
+    setInterval(changeImage,2000)
+</script>
+
+
+
+
+</body>
+</html>

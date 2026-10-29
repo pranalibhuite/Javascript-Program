@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="h3">Lorem ipsum dolor sit amet.</h3>
+    <p id="p" onmouseenter="enter()" onmouseleave="leave()">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quae nisi harum ea officia delectus totam, autem quibusdam? Ducimus quis ipsa quod aut, nostrum minima ad animi assumenda laudantium quo?</p>
+    <input type="text" placeholder="enter a value" id="inputs" onkeydown="downs()" onkeyup="ups()" onkeypress="presss()"/>
+    <!-- <div id="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dignissimos quibusdam eaque, reiciendis illo nesciunt incidunt ad doloremque eum tempora.</div> -->
+    <button onclick="textclick()">Click</button>
+    <button onclick="increment()">Increment</button>
+    <span id="h4">0</span>
+    <button onclick="decrement()">decrement</button>
+    <button ondblclick="doubleclicks()">DoubleClick</button>
+    <button oncontextmenu="rightclick()">rightClick</button>
+    <button>mouse enter</button>
+    <!-- <button mousehover="mousehove()">Mouse hover</button> -->
+     <!-- mouseout -->
+    <script>
+
+        function textclick(){
+            let element=document.createElement('h2')
+            element.textContent='hello everyone'
+
+            document.body.appendChild(element)
+        }
+
+        let count=0;
+        function increment(){
+            document.getElementById('h4').innerHTML=count++
+        }
+
+        function decrement(){
+            document.getElementById('h4').innerHTML=count--
+        }
+
+        function doubleclicks(){
+            document.getElementById('h3').innerHTML='javascript class....'
+        }
+        function rightclick(){
+            document.getElementById('h3').style.backgroundColor='pink'
+        }
+        
+        function enter(){
+            document.getElementById('p').style.backgroundColor='brown'
+        }
+
+        function leave(){
+            document.getElementById('p').style.backgroundColor='white' 
+       }
+
+    //    function mousehover(){
+    //     document.getElementById('div').style.backgroundColor='red'
+    //    }
+
+    function downs(){
+        document.body.style.backgroundColor='orange'
+    }
+
+    function ups(){
+        document.body.style.backgroundColor='white'
+    }
+
+    // function presss(){
+    //     document.body.style.backgroundColor='green'
+    // }
+
+
+
+
+
+        </script>
+    
+</body>
+</html>

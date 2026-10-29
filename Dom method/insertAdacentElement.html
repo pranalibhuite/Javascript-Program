@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #demo{
+        border: 4px solid black;
+        background-color: red;
+        width: 500px;
+        padding: 40px;
+        margin: auto;       
+}
+
+</style>
+
+<body>
+
+    <div id="demo">
+        <h1>This a existing element</h1>
+    </div>
+
+<script>
+        let target='<h1>This is a additional text</h1>';
+        let element=document.getElementById("demo");
+        element.insertAdjacentHTML("beforebegin",target)
+        element.insertAdjacentHTML("afterbegin",target)
+        element.insertAdjacentHTML("beforeend",target)
+        element.insertAdjacentHTML("afterend",target)
+
+        let elnt=document.createElement('h3')
+        elnt.textContent="its a text through the insertadjacent element";
+        element.insertAdjacentElement("beforebegin",elnt)
+        element.insertAdjacentElement("afterbegin",elnt)
+        element.insertAdjacentElement("beforeend",elnt)
+        element.insertAdjacentElement("afterend",elnt)
+
+        let textNode="this is just a text";
+        element.insertAdjacentText("beforebegin",textNode)
+        element.insertAdjacentElement("afterend",textNode)
+           // element.insertAdjacentElement("afterbegin",elnt)
+</script>
+</body>
+</html>

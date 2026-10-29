@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <style>
+        p {
+            color: red;
+        }
+
+        #span {
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm">
+
+        <input type="text" id="name" placeholder="Enter your name">
+        <p id="nameError"></p>
+
+        <input type="email" id="email" placeholder="Enter your Email">
+        <p id="emailError"></p>
+
+        <input type="text" id="mobile" placeholder="Enter your mobile">
+        <p id="mobileError"></p>
+
+        <!-- Password -->
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <span onclick="showPassword()" id="span">
+            <i class="fa-solid fa-eye-slash"></i>
+        </span>
+
+        <p id="passwordError"></p>
+
+        <input type="password" id="confirm" placeholder="Confirm password">
+        <span onclick="showPassword()" id="span">
+            <i class="fa-solid fa-eye-slash"></i>
+        </span>
+        <p id="confirmError"></p>
+        
+         
+        
+
+
+        <button type="submit">Submit</button>
+
+        <h3 id="result"></h3>
+
+    </form>
+
+
+    <script>
+
+        let form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let confirm = document.getElementById("confirm").value.trim();
+
+
+            // Regex Pattern
+
+            let nameRegex = /^[a-zA-Z\s-]{2,}$/;
+
+            let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            let mobileRegex = /^[0-9]{10}$/;
+
+            let passwordRegex =
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+
+
+            // Clear old errors
+
+            document.querySelectorAll("p").forEach(function (error) {
+                error.innerText = "";
+            });
+
+            document.getElementById("result").innerText = "";
+
+            let valid = true;
+
+
+            // Name validation
+
+            if (!nameRegex.test(name)) {
+
+                document.getElementById("nameError").innerText =
+                    "Enter valid name. Minimum 2 characters.";
+
+                valid = false;
+            }
+
+
+            // Email validation
+
+            if (!emailRegex.test(email)) {
+
+                document.getElementById("emailError").innerText =
+                    "Enter valid email. Email must contain @ and .";
+
+                valid = false;
+            }
+
+
+            // Mobile validation
+
+            if (!mobileRegex.test(mobile)) {
+
+                document.getElementById("mobileError").innerText =
+                    "Mobile number must contain 10 digits.";
+
+                valid = false;
+            }
+
+
+            // Password validation
+
+            if (!passwordRegex.test(password)) {
+
+                document.getElementById("passwordError").innerText =
+                    "Minimum 8 characters, uppercase, lowercase, number & symbol.";
+
+                valid = false;
+            }
+
+
+            // Confirm password
+
+            if (confirm === "" || password !== confirm) {
+
+                document.getElementById("confirmError").innerText =
+                    "Password does not match.";
+
+                valid = false;
+            }
+
+
+            // Final validation
+
+            if (valid) {
+
+                document.getElementById("result").innerText =
+                    "Registration successful";
+
+                form.reset();
+            }
+
+        });
+
+
+        // Show / Hide Password
+
+        function showPassword() {
+
+            let password = document.getElementById("password");
+            let span = document.getElementById("span");
+
+            if (password.type == "password") {
+
+                password.type = "text";
+
+                span.innerHTML =
+                    "<i class='fa-solid fa-eye'></i>";
+
+            }
+            else {
+
+                password.type = "password";
+
+                span.innerHTML =
+                    "<i class='fa-solid fa-eye-slash'></i>";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

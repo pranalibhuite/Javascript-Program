@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1"></h1>
+    <p class="add">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, fuga!</p>
+    <i class="add">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, ducimus?</i>
+    <div class="add">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quis.</div>
+    <div class="add">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quis.</div>
+    <div class="add">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quis.</div>
+    <div class="add">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quis.</div>
+    <h3></h3>
+    <button onclick="addText()">Add Value</button>
+    <button onclick="classText()">Change the class text</button>
+    <button onclick="elementText()">Add text with element selector</button>
+    <button onclick="changeText()">change value with querySelector</button>
+    <button onclick="selectAll()">select queryselector</button>
+    <script>
+        function addText() {
+            document.getElementById('h1').innerHTML = 'Hello Pranali'
+        }
+
+        function classText() {
+            console.log('testing')
+            document.getElementsByClassName('add')[2].innerHTML = 'changable text using class selector'
+        }
+        function elementText() {
+            console.log('called')
+            document.getElementsByTagName('h3')[0].innerHTML = 'h3 text added'
+        }
+        function changeText(){
+            document.querySelector('.add').innerHTML='querySelector called'
+        } 
+
+        function selectAll(){
+            let add=document.querySelectorAll('.add')
+            for(let i=0;i<add.length;i++){
+                add[i].innerHTML='text is change through queryselector all'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
